@@ -18,8 +18,8 @@ public class Canvas
     public static Canvas getCanvas()
     {
         if(canvasSingleton == null) {
-            canvasSingleton = new Canvas("BlueJ Picture Demo", 500, 300,
-                    Color.white);
+            canvasSingleton = new Canvas("UH PLUH", 1280, 720,
+                    Color.blue);
         }
         canvasSingleton.setVisible(true);
         return canvasSingleton;
@@ -132,6 +132,9 @@ public class Canvas
         }
         else if(colorString.equals("white")) {
             graphic.setColor(Color.white);
+        }
+        else if(colorString.equals("gray")) {
+            graphic.setColor(new Color(84, 85, 87));
         }
         else {
             graphic.setColor(Color.black);

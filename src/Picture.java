@@ -19,6 +19,8 @@ public class Picture
     }
 
     public static void main(String[] args) {
+        Picture picture = new Picture();
+        picture.draw();
     }
 
     /**
@@ -43,7 +45,7 @@ public class Picture
             roof.moveVertical(-60);
             roof.makeVisible();
 
-            sun.changeColor("yellow");
+            sun.changeColor("gray");
             sun.moveHorizontal(100);
             sun.moveVertical(-40);
             sun.changeSize(80);
