@@ -137,16 +137,28 @@ public class Canvas
             graphic.setColor(new Color(84, 85, 87));
         }
         else if(colorString.equals("wall")) {
-            graphic.setColor(new Color(233, 247, 244));
+            graphic.setColor(new Color(235, 242, 242));
         }
         else if(colorString.equals("wall2")) {
-            graphic.setColor(new Color(201, 212, 209));
+            graphic.setColor(new Color(230, 237, 237));
         }
-        else if(colorString.equals("garage")) {
-            graphic.setColor(new Color(89, 61, 50));
+        else if(colorString.equals("wood")) {
+            graphic.setColor(new Color(110, 60, 29));
+        }
+        else if(colorString.equals("wood2")) {
+            graphic.setColor(new Color(130, 80, 49));
         }
         else if(colorString.equals("inside")) {
-            graphic.setColor(new Color(240, 204, 153));
+            graphic.setColor(new Color(250, 246, 230));
+        }
+        else if(colorString.equals("roofMain")) {
+            graphic.setColor(new Color(37, 38, 38));
+        }
+        else if(colorString.equals("roofSub")) {
+            graphic.setColor(new Color(49, 51, 51));
+        }
+        else if(colorString.equals("gold")) {
+            graphic.setColor(new Color(252, 186, 3));
         }
         else {
             graphic.setColor(Color.black);
