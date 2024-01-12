@@ -1,9 +1,14 @@
 public class Picture
 {
     private Square wall;
-    private Square window;
-    private Triangle roof;
-    private Circle sun;
+    private Square wall2;
+    private Square garageDoor;
+    private Square gWindow;
+    private Square gWindow2;
+    private Square gWindow3;
+    private Square gWindow4;
+    private Square gWindow5;
+    private Square backround;
     private boolean drawn;
 
     /**
@@ -11,10 +16,15 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
-        roof = new Triangle();
-        sun = new Circle();
+        wall = new Square(550, 400);
+        wall2 = new Square(550, 400);
+        garageDoor = new Square(450, 400);
+        gWindow = new Square(50, 50);
+        gWindow2 = new Square(50, 50);
+        gWindow3 = new Square(50, 50);
+        gWindow4 = new Square(50, 50);
+        gWindow5 = new Square(50, 50);
+        backround = new Square(4000, 4000);
         drawn = false;
     }
 
@@ -25,54 +35,59 @@ public class Picture
 
     /**
      * Draw this picture.
+     * square -310, -120
+     *
      */
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
+            backround.moveHorizontal(-310);
+            backround.moveVertical(-120);
+            backround.changeColor("sky");
+            backround.makeVisible();
+
+            wall.moveHorizontal(200);
+            wall.moveVertical(560);
+            wall.changeColor("wall");
             wall.makeVisible();
 
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
+            wall2.moveHorizontal(750);
+            wall2.moveVertical(590);
+            wall2.changeColor("wall2");
+            wall2.makeVisible();
 
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
+            garageDoor.moveHorizontal(250);
+            garageDoor.moveVertical(650);
+            garageDoor.changeColor("garage");
+            garageDoor.makeVisible();
 
-            sun.changeColor("gray");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
-            sun.makeVisible();
-            drawn = true;
+            gWindow.moveHorizontal(290);
+            gWindow.moveVertical(670);
+            gWindow.changeColor("inside");
+            gWindow.makeVisible();
+
+            gWindow2.moveHorizontal(370);
+            gWindow2.moveVertical(670);
+            gWindow2.changeColor("inside");
+            gWindow2.makeVisible();
+
+            gWindow3.moveHorizontal(450);
+            gWindow3.moveVertical(670);
+            gWindow3.changeColor("inside");
+            gWindow3.makeVisible();
+
+            gWindow4.moveHorizontal(530);
+            gWindow4.moveVertical(670);
+            gWindow4.changeColor("inside");
+            gWindow4.makeVisible();
+
+            gWindow5.moveHorizontal(610);
+            gWindow5.moveVertical(670);
+            gWindow5.changeColor("inside");
+            gWindow5.makeVisible();
+
         }
     }
 
-    /**
-     * Change this picture to black/white display
-     */
-    public void setBlackAndWhite()
-    {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
-        sun.changeColor("black");
-    }
 
-    /**
-     * Change this picture to use color display
-     */
-    public void setColor()
-    {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
-        sun.changeColor("yellow");
-    }
 }

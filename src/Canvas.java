@@ -18,8 +18,8 @@ public class Canvas
     public static Canvas getCanvas()
     {
         if(canvasSingleton == null) {
-            canvasSingleton = new Canvas("UH PLUH", 1280, 720,
-                    Color.blue);
+            canvasSingleton = new Canvas("UH PLUH", 1920, 1080,
+                    Color.white);
         }
         canvasSingleton.setVisible(true);
         return canvasSingleton;
@@ -118,8 +118,8 @@ public class Canvas
         else if(colorString.equals("black")) {
             graphic.setColor(Color.black);
         }
-        else if(colorString.equals("blue")) {
-            graphic.setColor(new Color(30, 75, 220));
+        else if(colorString.equals("sky")) {
+            graphic.setColor(new Color(164, 233, 252));
         }
         else if(colorString.equals("yellow")) {
             graphic.setColor(new Color(255, 230, 0));
@@ -135,6 +135,18 @@ public class Canvas
         }
         else if(colorString.equals("gray")) {
             graphic.setColor(new Color(84, 85, 87));
+        }
+        else if(colorString.equals("wall")) {
+            graphic.setColor(new Color(233, 247, 244));
+        }
+        else if(colorString.equals("wall2")) {
+            graphic.setColor(new Color(201, 212, 209));
+        }
+        else if(colorString.equals("garage")) {
+            graphic.setColor(new Color(89, 61, 50));
+        }
+        else if(colorString.equals("inside")) {
+            graphic.setColor(new Color(240, 204, 153));
         }
         else {
             graphic.setColor(Color.black);
