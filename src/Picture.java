@@ -168,7 +168,7 @@ public class Picture
             doorknob.moveVertical(860);
             doorknob.changeColor("gold");
             doorknob.makeVisible();
-
+            //
             beam.moveHorizontal(925);
             beam.moveVertical(580);
             beam.changeColor("wood2");
